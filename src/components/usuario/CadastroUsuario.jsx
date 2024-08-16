@@ -95,6 +95,11 @@ const CadastroUsuario = () => {
             isValid = false;
         }
 
+        if (!numPredial) {
+            errors.numPredial = 'Número predial é obrigatório';
+            isValid = false;
+        }
+
         if (!dsBairro) {
             errors.dsBairro = 'Bairro é obrigatória';
             isValid = false;
@@ -111,7 +116,6 @@ const CadastroUsuario = () => {
 
     const createUsuario = async (e) => {
         e.preventDefault()
-        setLoading(true)
         if (validation()) {
             const usuarioDTO = {
                 dsNome: dsNome,
@@ -132,6 +136,7 @@ const CadastroUsuario = () => {
                 dsComplemento: dsComplemento,
                 cidade: cidade
             }
+            setLoading(true)
             signup(usuarioDTO)
         }
     }
@@ -223,7 +228,8 @@ const CadastroUsuario = () => {
                                              minFractionDigits={0}
                                              className="text-base text-color surface-overlay border-1 border-solid surface-border
                                              border-round appearance-none outline-none focus:border-primary w-full input-number"
-                                             inputClassName={'input-number'}/>
+                                             inputClassName={'input-number'}
+                                             useGrouping={false}/>
                                     <label htmlFor="numPredial">Numero Predial</label>
                                 </span>
                     </div>
