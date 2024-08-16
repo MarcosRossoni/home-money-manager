@@ -66,6 +66,7 @@ const Categoria = () => {
         setFirst(event.first);
         setRows(event.rows);
         changeList(event.page)
+
     };
 
     const changeList = (paginaAtual) => {
