@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import {IoIosAdd} from "react-icons/io";
 import ButtonSpeeddial from "../components/buttons/ButtonSpeeddial.jsx";
 import {Button} from "primereact/button";
@@ -23,7 +23,7 @@ const Categoria = () => {
     const [pag, setPage] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    const [itemsMenu, setItemsMenu] = useState([
+    const [itemsMenu] = useState([
         {
             label: 'Cadastrar Conta',
             icon: <IoIosAdd style={{fontSize: '1.5rem'}}/>,
@@ -105,7 +105,7 @@ const Categoria = () => {
             changeList(pag)
             setHideDialog()
         }
-    }, [reload]);
+    }, [reload, pag]);
 
     return (
         <div className="relative" style={{height: ("88vh")}}>
