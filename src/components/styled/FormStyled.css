@@ -1,0 +1,28 @@
+.input-number.p-inputtext {
+    padding: 0.5rem !important;
+    border: 0 solid #d1d5db !important;
+}
+
+.input-password.p-inputtext {
+    padding: 0.5rem !important;
+    border: 0 solid #d1d5db !important;
+}
+
+.input-date.p-inputtext {
+    padding: 0.5rem !important;
+    border: 0 solid #d1d5db !important;
+}
+
+.autocomplete.p-inputtext {
+    padding: 0.5rem !important;
+    border: 0 solid #d1d5db !important;
+}
+
+.dropdown-component .p-inputtext {
+    padding: 0.5rem !important;
+    border: 0 solid #d1d5db !important;
+}
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    color: black !important;
+    background-color: #E4E5EA !important;
+}
