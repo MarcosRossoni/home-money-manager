@@ -4,8 +4,8 @@ import verificaToken from "./verifica.token";
 let TOKEN = JSON.parse(localStorage.getItem("user_token"));
 
 const pathBackend = axios.create({
-    baseURL: "http://localhost:9000",
-    // baseURL: "https://home-money-manager.up.railway.app",
+    // baseURL: "http://localhost:9000",
+    baseURL: "https://home-money-manager.up.railway.app",
 })
 
 pathBackend.interceptors.request.use(async config => {
