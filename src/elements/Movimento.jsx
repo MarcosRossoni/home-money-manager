@@ -285,7 +285,7 @@ const Movimento = () => {
                     }
                     {
                         visibleCategoria ?
-                            <CadastroCategoria visible={visibleCategoria} setHideDialog={setHideDialogCategoria}/> :
+                            <CadastroCategoria visible={visibleCategoria} setHideDialog={setHideDialogCategoria} idCategoria={null}/> :
                             <></>
                     }
                 </div>

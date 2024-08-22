@@ -31,7 +31,7 @@ const MenuBar = () => {
             label: 'Preferências',
             items: [
                 {
-                    label: 'Em Progreço',
+                    label: 'Em Progresso',
                     icon: 'pi pi-cog'
                 }
             ]

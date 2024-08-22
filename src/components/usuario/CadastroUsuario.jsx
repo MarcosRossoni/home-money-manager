@@ -232,6 +232,7 @@ const CadastroUsuario = () => {
                                              useGrouping={false}/>
                                     <label htmlFor="numPredial">Numero Predial</label>
                                 </span>
+                        {errors.numPredial && <small style={{ color: 'red', marginLeft: '10px' }}>{errors.numPredial}</small>}
                     </div>
                     <div className="field col-12 md:col-6 mt-4">
                                 <span className="p-float-label">
