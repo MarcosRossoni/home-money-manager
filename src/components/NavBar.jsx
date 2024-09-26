@@ -14,6 +14,10 @@ const NavBar = ({width}) => {
     const {signout} = useAuth();
     const [visible, setVisible] = useState(false);
 
+    function editarUsuario () {
+        window.location.href = "/editar-usuario"
+    }
+
     return (
         <div className="flex w-full">
             <nav className="flex align-items-center justify-content-between py-2 px-2 w-full gap-1 bg-primary">
@@ -35,11 +39,14 @@ const NavBar = ({width}) => {
                     </div>
                 </div>
                 <div className="flex">
-                    <Avatar icon="pi pi-user" className="mr-2 surface-ground text-black-alpha-90" size="large"
+                    <Avatar image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png" icon="pi pi-user" className="mr-2 surface-ground text-black-alpha-90" size="large"
                             onClick={(e) => op.current.toggle(e)} shape="circle"
                             style={{cursor: "pointer"}}/>
                     <OverlayPanel ref={op}>
-                        <Button onClick={signout}>Sair</Button>
+                        <div className="flex flex-column flex-wrap align-items-center">
+                            <Button onClick={editarUsuario} className="pb-3 mb-2" label="Editar" text />
+                            <Button onClick={signout}>Sair</Button>
+                        </div>
                     </OverlayPanel>
                 </div>
             </nav>

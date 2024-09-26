@@ -11,6 +11,7 @@ import CadastroUsuario from "./components/usuario/CadastroUsuario.jsx";
 import Categoria from "./elements/Categoria.jsx";
 import EsqueciSenha from "./components/usuario/EsqueciSenha.jsx";
 import RedefinirSenha from "./components/usuario/RedefinirSenha.jsx";
+import AlterarUsuario from "./elements/AlterarUsuario";
 
 const Private = ({Item}) => {
     const {signed} = useAuth();
@@ -28,6 +29,7 @@ const RoutesApp = () => {
                     <Route exact path="/usuario" element={<Private Item={Usuario}/>}/>
                     <Route exact path="/movimento" element={<Private Item={Movimento}/>}/>
                     <Route exact path="/categoria" element={<Private Item={Categoria}/>}/>
+                    <Route exact path="/editar-usuario" element={<Private Item={AlterarUsuario}/>}/>
                     <Route path="/login" element={<Login/>}/>
                     <Route exact path="/signup" element={<CadastroUsuario/>}/>
                     <Route exact path="/esqueci-senha" element={<EsqueciSenha/>}/>
