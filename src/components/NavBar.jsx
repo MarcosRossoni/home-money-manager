@@ -14,10 +14,6 @@ const NavBar = ({width}) => {
     const {signout} = useAuth();
     const [visible, setVisible] = useState(false);
 
-    function editarUsuario () {
-        window.location.href = "/editar-usuario"
-    }
-
     return (
         <div className="flex w-full">
             <nav className="flex align-items-center justify-content-between py-2 px-2 w-full gap-1 bg-primary">
@@ -44,7 +40,9 @@ const NavBar = ({width}) => {
                             style={{cursor: "pointer"}}/>
                     <OverlayPanel ref={op}>
                         <div className="flex flex-column flex-wrap align-items-center">
-                            <Button onClick={editarUsuario} className="pb-3 mb-2" label="Editar" text />
+                            <Link to={"/editar-usuario"}>
+                                <Button className="pb-3 mb-2" label="Editar" text />
+                            </Link>
                             <Button onClick={signout}>Sair</Button>
                         </div>
                     </OverlayPanel>
