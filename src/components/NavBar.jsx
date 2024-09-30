@@ -41,7 +41,7 @@ const NavBar = ({width}) => {
                     <OverlayPanel ref={op}>
                         <div className="flex flex-column flex-wrap align-items-center">
                             <Link to={"/editar-usuario"}>
-                                <Button className="pb-3 mb-2" label="Editar" text />
+                                <Button onClick={(e) => op.current.toggle(e)} className="pb-3 mb-2" label="Editar" text />
                             </Link>
                             <Button onClick={signout}>Sair</Button>
                         </div>
